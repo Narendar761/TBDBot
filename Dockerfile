@@ -1,4 +1,4 @@
-FROM hrishi2861/terabox:latest
+FROM godxneon/Terabox-Download-Bot
 WORKDIR /app
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
