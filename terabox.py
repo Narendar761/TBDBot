@@ -24,33 +24,33 @@ load_dotenv('config.env', override=True)
 
 logging.basicConfig(level=logging.INFO)
 
-ADMINS = list(map(int, os.environ.get('ADMINS', '').split()))
+ADMINS = list(map(int, os.environ.get('ADMINS', '819861991').split()))
 if not ADMINS:
     logging.error("ADMINS variable is missing! Exiting now")
     exit(1)
     
-api_id = os.environ.get('TELEGRAM_API', '14867407')
+api_id = os.environ.get('TELEGRAM_API', '22808125')
 if not api_id:
     logging.error("TELEGRAM_API variable is missing! Exiting now")
     exit(1)
 
-api_hash = os.environ.get('TELEGRAM_HASH', '2094fa9459389f870ae6b88197cf080b')
+api_hash = os.environ.get('TELEGRAM_HASH', '406c09543fec722fe3c48ca2f06d78de')
 if not api_hash:
     logging.error("TELEGRAM_HASH variable is missing! Exiting now")
     exit(1)
     
-bot_token = os.environ.get('BOT_TOKEN', '7095115748:AAG1XsMbY7Yh2CD-I5zUveuW0kaUO0B71jM')
+bot_token = os.environ.get('BOT_TOKEN', '6826963075:AAH82I95CN08QWChY2LzHNZJ4bAslC6WcVs')
 if not bot_token:
     logging.error("BOT_TOKEN variable is missing! Exiting now")
     exit(1)
-dump_id = os.environ.get('DUMP_CHAT_ID', '-1002079370592')
+dump_id = os.environ.get('DUMP_CHAT_ID', '-1001916142483')
 if not dump_id:
     logging.error("DUMP_CHAT_ID variable is missing! Exiting now")
     exit(1)
 else:
     dump_id = int(dump_id)
 
-fsub_id = os.environ.get('FSUB_ID', '')
+fsub_id = os.environ.get('FSUB_ID', '-1001988879902')
 if not fsub_id:
     logging.error("FSUB_ID variable is missing! Exiting now")
     exit(1)
@@ -84,8 +84,8 @@ async def start_command(client, message):
     await sticker_message.delete()
     user_mention = message.from_user.mention
     reply_message = f"ᴡᴇʟᴄᴏᴍᴇ, {user_mention}.\n\n🌟 ɪ ᴀᴍ ᴀ ᴛᴇʀᴀʙᴏx ᴅᴏᴡɴʟᴏᴀᴅᴇʀ ʙᴏᴛ. sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛᴇʀᴀʙᴏx ʟɪɴᴋ ɪ ᴡɪʟʟ ᴅᴏᴡɴʟᴏᴀᴅ ᴡɪᴛʜɪɴ ғᴇᴡ sᴇᴄᴏɴᴅs ᴀɴᴅ sᴇɴᴅ ɪᴛ ᴛᴏ ʏᴏᴜ ✨."
-    join_button = InlineKeyboardButton("ᴊᴏɪɴ ❤️🚀", url="https://t.me/KLMovieGroupTG")
-    developer_button = InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ ⚡️", url="https://t.me/KLMovieGroupTG")
+    join_button = InlineKeyboardButton("ᴊᴏɪɴ ❤️🚀", url="https://t.me/N_K_bots")
+    developer_button = InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ ⚡️", url="https://t.me/N_K_bots")
     reply_markup = InlineKeyboardMarkup([[join_button, developer_button]])
     await message.reply_text(reply_message, reply_markup=reply_markup)
 
@@ -156,7 +156,7 @@ async def handle_message(client, message: Message):
     is_member = await is_user_member(client, user_id)
 
     if not is_member:
-        join_button = InlineKeyboardButton("ᴊᴏɪɴ ❤️🚀", url="https://t.me/KLMovieGroupTG")
+        join_button = InlineKeyboardButton("ᴊᴏɪɴ ❤️🚀", url="https://t.me/N_K_bots")
         reply_markup = InlineKeyboardMarkup([[join_button]])
         await message.reply_text("ʏᴏᴜ ᴍᴜsᴛ ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴍᴇ.", reply_markup=reply_markup)
         return
